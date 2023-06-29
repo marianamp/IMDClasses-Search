@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gerenciador de Notas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body >
+        <div id="screen">
+            <div id="leftside_register" class="flex-container">
+                <div class="flex-item">
+                    <h2>WELCOME BACK!</h2>
+                    <br>
+                </div>
+                <div class="flex-item">
+                    <b><label>To keep connected with us please<br>login with your personal info </label></b>
+                    <br>
+                </div>
+                <div class="flex-item">
+                    <br>
+                    <br>
+                    <br>
+                    <button onclick="redirect_login()"><b>Sign In</b></button>
+                </div>
+            </div>
+            <div id="rightside_register" class="flex-container">
+                <form action="/register" method="POST">
+                    <div class="flex-item">
+                        <h1>Create account</h1>
+                        <br>
+                    </div>
+                    <div class="flex-item">
+                        <b><label>or use your email for registration: </label></b>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="flex-item">
+                        <input type="text" name="username" placeholder="Name" required>
+                        <i class="material-icons">person</i>                       
+                    </div>
+                    <br>
+                    <div class="flex-item">
+                        <input type="email" name="email" placeholder="E-mail">  
+                        <i class="material-icons">mail</i>                           
+                    </div>
+                    <br>
+                    <div class="flex-item">
+                        <input type="password" name="password" placeholder="Password"> 
+                        <i class="material-icons">lock</i>
+                    </div>
+                    <div class="flex-item">
+                        <br>
+                        <button type="submit" onclick="redirect_home()"><b>Sign Up</b></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="main.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+.screen{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #F0F1F3;
+    margin: 0px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+    padding-left: 20%;
+}
+#menuside {
+    width: 20%;
+    height: 100%;
+    background-color: #C72175;
+    position: fixed;
+    overflow: auto;
+}
+.flex-item {
+    position: relative;
+}
+#menuside {
+    position: fixed;
+    overflow: auto;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #C72175;
+    position: fixed;  
+    overflow: auto;
+} 
+li a{
+    display: block;
+    color: white;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 0.18rem solid #4F1180;
+} 
+
+#collapse{
+    background-color:#4F1180;
+    height: 10%;
+    text-align: right;
+}
+li a.active{
+    font-weight: bold;
+}
+li a:hover:not(.active){
+    background-color:#4F1180;
+}
+#infoside{
+    margin-left: 5%;
+}
+
+fieldset{
+    height: 32rem;
+    width: 58rem;
+    margin: 0;
+    padding: 0;
+}
+form{
+    background-color: white;
+    text-align: center;
+    padding: 5rem;
+}
+form .flex-item{
+    width: 100%;
+}
+#user_name{
+    height: 7.9rem;
+}
+label{
+    display: inline-block;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    width: 9rem;
+    text-align: left;
+}
+h2{
+    font-size: 1.8em;
+}
+input{
+    height: 3rem;
+    width: 45rem;
+    border-radius: 4px;
+    border-width: 0.1rem;
+    transition: 0.3s;
+}
+input:focus {
+    outline: none;
+    border-color: #4F1180;
+    box-shadow: 0 0 8px 0 #4F1180;
+}
+#button{
+    background-color:#4F1180;
+    color: white;
+    height: 50px;
+    width: 150px;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+span{
+    color:#4F1180;
+}
+

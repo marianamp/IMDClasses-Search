@@ -1,0 +1,101 @@
+.screen{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    margin: 0px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+}
+.flex-item form{
+    width: 100%;
+}
+#leftside_register, #rightside_register, #leftside_login, #rightside_login{
+    text-align: center;
+    float: left;
+    min-height: 100vh;
+}
+#leftside_register{
+    width: 30%;
+    color:white;
+    justify-content:center;
+}
+#rightside_register{
+    width: 70%;
+    background:rgb(255, 255, 255);
+    justify-content:center;
+}
+#rightside_login{
+    width: 30%;
+    color:white;
+    justify-content:center;
+}
+#leftside_login{
+    width: 70%;
+    background:rgb(255, 255, 255);
+    justify-content:center;
+}
+h1{
+    font-size:4em;
+    color:#C72175;
+}
+h2{
+    font-size: 2em;
+}
+button{
+    background-color:#C72175;
+    color: white;
+    height: 50px;
+    width: 150px;
+    border: 0px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.flex-item {
+    position: relative;
+}
+input{
+    height: 36px;
+    width: 300px;
+    border: 2px solid #4F1180;
+    border-radius: 4px;
+    padding-left: 30px;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+i{
+    position: relative;
+    right: 336px;
+    top: 7px;
+    transition: 0.3s;
+}
+input:focus {
+    outline: none;
+    border-color: #4F1180;
+    box-shadow: 0 0 8px 0 #4F1180;
+}
+input:focus + i {
+    color: #C72175;
+}
+::placeholder{
+    color: black; 
+}
+button:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+  
+
