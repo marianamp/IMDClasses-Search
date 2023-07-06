@@ -20,3 +20,4 @@ connection.connect(function(error) {
 
 // Export the connection as a module.
 module.exports = connection;
+

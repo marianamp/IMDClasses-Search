@@ -13,6 +13,9 @@ body{
     margin: auto;
     padding-left: 20%;
 }
+#classes_text{
+    text-align: center;
+}
 #menuside {
     width: 20%;
     height: 100%;
@@ -46,9 +49,11 @@ li a{
     font-family: 'Inter', sans-serif;
     border-bottom: 0.18rem solid #4F1180;
 } 
-
+.active{
+    background-color: #4F1180;
+}
 #collapse{
-    background-color:#4F1180;
+    background-color:#C72175;
     height: 10%;
     text-align: right;
 }
@@ -61,17 +66,25 @@ li a:hover:not(.active){
 #infoside{
     margin-left: 5%;
 }
-
 fieldset{
-    height: 32rem;
-    width: 58rem;
+    height: fit-content;
+    width: fit-content;
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 form{
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    height: 16rem;
+    width: 53rem;
     background-color: white;
-    text-align: center;
-    padding: 5rem;
+    text-align: left;
+    padding: 1rem;
+    border: 0.1rem solid black;
+}
+#course_info{
+    margin-left: 1.5rem;
 }
 form .flex-item{
     width: 100%;
@@ -114,7 +127,46 @@ input:focus {
     cursor: pointer;
     transition: 0.3s;
 }
+#buttons{
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    float: right;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#4F1180;
+    color: white;
+}
+button{
+    height: 3rem;
+    width: 3rem;
+    border: 0.18rem solid #C72175;
+}
 span{
     color:#4F1180;
 }
-
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.form-column {
+    flex: 1;
+    margin-right: 10px;
+}
+.form-column label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-column input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+img{
+    height: 16rem;
+    width: 22rem;
+}

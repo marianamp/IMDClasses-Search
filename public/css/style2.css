@@ -37,6 +37,9 @@ ul{
     position: fixed;  
     overflow: auto;
 } 
+.active{
+    background-color: #4F1180;
+}
 li a{
     display: block;
     color: white;
@@ -46,9 +49,8 @@ li a{
     font-family: 'Inter', sans-serif;
     border-bottom: 0.18rem solid #4F1180;
 } 
-
 #collapse{
-    background-color:#4F1180;
+    background-color:#C72175;
     height: 10%;
     text-align: right;
 }
@@ -61,9 +63,8 @@ li a:hover:not(.active){
 #infoside{
     margin-left: 5%;
 }
-
 fieldset{
-    height: 32rem;
+    height: 30rem;
     width: 58rem;
     margin: 0;
     padding: 0;
@@ -71,9 +72,10 @@ fieldset{
     background-size: cover;
 }
 form{
+    height: 16.2rem;
     background-color: white;
     text-align: center;
-    padding: 5rem;
+    padding: 3rem;
 }
 form .flex-item{
     width: 100%;

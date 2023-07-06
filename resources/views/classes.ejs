@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/style4.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" >
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
         <div id="screen">
@@ -25,30 +26,63 @@
                     </div>
                     <br>
                     <fieldset>
-                        <h3>All Classes Data</h3>
+                        <h3 id="classes_text">All Classes Data</h3>
                         <div class="flex-item">
                             <input type="text" id="course_info" placeholder="Search class">
                             <input type="submit" value="Search" id="button">
                         </div>
-                        <form>
-                            <div>
-                                <ul id="disciplinas-listS"></ul>
-                                <script>
-                                    $(document).ready(function() {
-                                      $.get('/disciplinas', function(data) {
-                                        var disciplinasList = $('#disciplinas-list');
-                                        $.each(data, function(index, disciplina) {
-                                          var listItem = $('<li>').text('Código: ' + disciplina.codigo +
-                                                                        ', Nome: ' + disciplina.nome_disciplina +
-                                                                        ', CH Total: ' + disciplina.ch_total +
-                                                                        ', Qtd. Unidades: ' + disciplina.qtd_unidades);
-                                          disciplinasList.append(listItem);
-                                        });
-                                      });
-                                    });
-                                  </script>
+                        <table>
+                            <tr>
+                              <th>Codigo</th>
+                              <th>Nome</th>
+                              <th>Carga Horária</th>
+                              <th>N° de unidades</th>
+                            </tr>
+                            <% result.forEach(function(result, i){ %>
+                                <tr>
+                                    <td><%= result.codigo %></td>
+                                    <td><%= result.nome_disciplina %></td>
+                                    <td><%= result.ch_total %></td>
+                                    <td><%= result.qtd_unidades %></td> 
+                                </tr>
+                            <% }) %>
+                        </table>
+                        <!-- <form>
+                            <div class="form-row">
+                                <div class="form-column">
+                                    <label for="codigo">Código</label>
+                                    <input type="text" id="codigo" readonly>
+                                </div>
+                                <div class="form-column">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" id="nome" readonly>
+                                </div>
+                                <div class="form-column">
+                                    <label for="ch">Carga Horária</label>
+                                    <input type="text" id="ch" readonly>
+                                </div>
+                                <div class="form-column">
+                                    <label for="qtdUnidades">N° de Unidades</label>
+                                    <input type="text" id="qtdUnidades" readonly>
+                                </div>
                             </div>
-                        </form>
+                        </form> -->
+                        <!-- <% result.forEach(function(result, i){ %>
+                            <tr>
+                                <th scope="row"> <%= i+1 %> </th>
+                                <td>%= result.codigo %><</td>
+                                <td><%= result.nome_disciplina %></td>
+                                <td><%= result.ch_total %></td>
+                                <td><%= result.qtd_unidades %></td>
+                                
+                            </tr>
+                        <% }) %> -->
+
+                        <div class="flex-item" id="buttons">
+                            <button><b>1</b></button>
+                            <button><b>2</b></button>
+                            <button><b>3</b></button>
+                        </div>
                     </fieldset>    
             </div>
         </div>

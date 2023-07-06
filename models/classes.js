@@ -2,14 +2,18 @@
 // Include the Connection module, which allows to use the database.js where establish the connection.
 const connection = require('../config');
 // AJAX Request
-exports.getClasses = (callback) => {
-    $.ajax({
-      url: '/classes',
-      method: 'GET',
-      success: callback,
-      error: (xhr, status, error) => {
-        console.error('Error to make a AJAX Request:', error);
-        callback(error);
-      }
-    });
-  };
+class ClassModel {
+    getClasses() {
+        const query = `
+        SELECT codigo, nome_disciplina, ch_total , qtd_unidades
+        FROM disciplinas
+        GROUP BY nome_disciplina, codigo, ch_total , qtd_unidades
+        `;
+        const result = new Promise((resolve, reject) => {
+            connection.query(query, (err, result) => resolve(result));
+        })
+        return result;
+    }
+}
+
+module.exports = new ClassModel();
